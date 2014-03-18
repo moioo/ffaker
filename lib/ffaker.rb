@@ -66,6 +66,7 @@ module Faker
   autoload :PhoneNumberMX, 'ffaker/phone_number_mx'
   autoload :PhoneNumberSN, 'ffaker/phone_number_sn'
   autoload :PhoneNumberSG, 'ffaker/phone_number_sg'
+  autoload :PhoneNumberCN, 'ffaker/phone_number_cn'
   autoload :Product,       'ffaker/product'
   autoload :SSN,           'ffaker/ssn'
   autoload :SSNSE,         'ffaker/ssn_se'
