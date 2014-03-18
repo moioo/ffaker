@@ -7,8 +7,8 @@ module  Faker
 
     def home_work_phone_number
       case rand(2)
-      when 0 then Faker.numerify("#{country_code}########")
-      when 1 then Faker.numerify("#{country_code}#######")
+      when 0 then Faker.numerify("#{country_code}-########")
+      when 1 then Faker.numerify("#{country_code}-#######")
       end
     end
 
@@ -24,12 +24,10 @@ module  Faker
     end
 
     def country_code
-      w = %w(0730 0731 0734 0735 010 020 0755)
-      w[rand(w.size)]
+      k(%w(0730 0731 0734 0735 010 020 0755)).rand
     end
     def mobile_code
-      w = %w(130 131 132 133 135 136 137 138 139 186 188 150)
-      w[rand(w.size)]
+      k(%w(130 131 132 133 135 136 137 138 139 186 188 150)).rand
     end
 
   end
