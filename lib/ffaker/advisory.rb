@@ -24,7 +24,7 @@ module Faker
       k(["传单","市场","微博","微信","QQ","网站","报纸","公开课","转介绍"]).rand
     end
     def rrand(collection)
-      k(collection).rand
+      collection[Kernel.rand(collection.length)]
     end
     WORDSSS = k [
       '其实我假装不在，我在听，你继续说~',
