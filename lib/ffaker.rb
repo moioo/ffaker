@@ -75,5 +75,6 @@ module Faker
   autoload :String,        'ffaker/string'
   autoload :Time,          'ffaker/time'
   autoload :Venue,         'ffaker/venue'
-  autoload :CityCN,          'ffaker/city_cn'
+  autoload :CityCN,        'ffaker/city_cn'
+  autoload :Advisory,      'ffaker/advisory'
 end
