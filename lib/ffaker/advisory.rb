@@ -26,7 +26,6 @@ module Faker
     def rrand(collection, size = 1)
       if size >  1
         t = Kernel.rand(size+1)
-        t = t == 0 ? 1 : t
         (t == 0 ? 1 : t).times.map{collection[Kernel.rand(collection.length)]}
       else
         collection[Kernel.rand(collection.length)]
