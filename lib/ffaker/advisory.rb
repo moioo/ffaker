@@ -23,8 +23,14 @@ module Faker
     def from_type
       k(["传单","市场","微博","微信","QQ","网站","报纸","公开课","转介绍"]).rand
     end
-    def rrand(collection)
-      collection[Kernel.rand(collection.length)]
+    def rrand(collection, size = 1)
+      if size >  1
+        t = Kernel.rand(size+1)
+        t = t == 0 ? 1 : t
+        (t == 0 ? 1 : t).times.map{collection[Kernel.rand(collection.length)]}
+      else
+        collection[Kernel.rand(collection.length)]
+      end
     end
     WORDSSS = k [
       '其实我假装不在，我在听，你继续说~',
