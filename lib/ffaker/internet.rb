@@ -14,7 +14,7 @@ module Faker
     end
 
     def free_email(name = nil)
-      "#{user_name(name)}@#{HOSTS.rand}"
+      "#{user_name(name)}#{rand(99)}@#{HOSTS.rand}"
     end
 
     def user_name(name = nil)
@@ -63,7 +63,7 @@ module Faker
     end
 
     BYTE = k((0..255).to_a.map { |n| n.to_s })
-    HOSTS = k %w(gmail.com yahoo.com hotmail.com)
+    HOSTS = k %w(gmail.com yahoo.com hotmail.com qq.com sina.com aliyun.com 163.com 126.com faxmail.com tom.com 189.cn 139.cn 139.com 21cn.cn sohu.com vip.qq.com vip.sina.com)
     DISPOSABLE_HOSTS = k %w(mailinator.com suremail.info spamherelots.com binkmail.com safetymail.info)
     DOMAIN_SUFFIXES = k %w(co.uk com us uk ca biz info name)
   end
